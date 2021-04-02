@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+
+<body>
+	<div class="form-structor">
+		<div class="str">
+			<div class="signup">
+				<div class="form-holder" style="margin-top: 3px; ">
+					<h1 style="font-size: 15px;"> {{ name }} </h1>
+				</div>
+				<div class="form-holder" style="margin-top: 3px;">
+					<form action="/changePassword" method="POST">
+						<div>
+							<input type="password" class="input" placeholder="New Password" name="password" />
+						</div>
+						<input class="submit-btn" type="submit" value="Change Password"></input>
+					</form>
+				</div>
+				<div class="form-holder" style="margin-top: 3px;">
+					<form action="/changeEmail" method="POST">
+						<div>
+							<input type="email" class="input" placeholder="New Email" name="email" />
+						</div>
+						<input class="submit-btn" type="submit" value="Change Email"></input>
+					</form>
+				</div>
+				<div class="form-holder" style="margin-top: 3px;">
+					<form action="/getInfo" method="POST">
+						<input class="submit-btn" type="submit" value="Get Info"></input>
+					</form>
+					<form action="/out" method="POST">
+						<input class="submit-btn" type="submit" value="Out"></input>
+					</form>
+				</div>
+	
+				<div class="form-holder" style="margin-top: 3px;">
+					<h1 style="font-size: 15px;"> {{ info }} </h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+</html>

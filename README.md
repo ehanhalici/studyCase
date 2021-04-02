@@ -1,0 +1,1 @@
+![example](https://github.com/ehanhalici/studyCase/blob/master/example.gif)
