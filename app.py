@@ -21,7 +21,9 @@ def register():
 		'email': request.form['email'],
 		'password': request.form['password']
 	}
-
+	if item_doc['name'] == "" or item_doc['password'] == "" or item_doc['email'] == "":
+		return render_template("register.html", items="Error")
+	
 	Collection.insert_one(item_doc)
 
 	return render_template("register.html", items="Successful")
@@ -66,6 +68,9 @@ def changePassword():
 		'password': request.form['password']
 	}
 
+	if newPassword['password'] == "":
+		return render_template("main.html", name = "error")
+
 	newValues = { "$set":newPassword}
 	Collection.update_one(token, newValues)
 
@@ -80,6 +85,9 @@ def changeEmail():
 	newEmail = {
 		'email': request.form['email']
 	}
+
+	if newEmail['email'] == "":
+		return render_template("main.html", name = "error")
 
 	newValues = { "$set":newEmail}
 	Collection.update_one(token, newValues)
