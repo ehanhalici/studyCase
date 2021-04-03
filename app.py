@@ -104,5 +104,17 @@ def out():
 
 	return render_template("register.html")
 
+
+@app.route('/delete',methods = ['POST'])
+def delete():
+	global token
+
+	Collection.delete_one(token)
+	token["name"] = ""
+	token["email"] = ""
+	token["password"] =""
+
+	return render_template("register.html")
+
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', debug=True)

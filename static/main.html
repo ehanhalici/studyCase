@@ -13,31 +13,34 @@
 	<div class="form-structor">
 		<div class="str">
 			<div class="signup">
-				<div class="form-holder" style="margin-top: 3px; ">
+				<div style="margin-top: 0px; ">
 					<h1 style="font-size: 15px;"> {{ name }} </h1>
 				</div>
-				<div class="form-holder" style="margin-top: 3px;">
+				<div  >
 					<form action="/changePassword" method="POST">
-						<div>
+						<div class="form-holder" style="margin-top: 3px;">
 							<input type="password" class="input" placeholder="New Password" name="password" />
 						</div>
-						<input class="submit-btn" type="submit" value="Change Password"></input>
+						<input class="submit-btn" style="margin-top: 1px;" type="submit" value="Change Password"></input>
 					</form>
 				</div>
-				<div class="form-holder" style="margin-top: 3px;">
+				<div  >
 					<form action="/changeEmail" method="POST">
-						<div>
+						<div class="form-holder" style="margin-top: 3px;">
 							<input type="email" class="input" placeholder="New Email" name="email" />
 						</div>
-						<input class="submit-btn" type="submit" value="Change Email"></input>
+						<input class="submit-btn" style="margin-top: 1px;" type="submit" value="Change Email"></input>
 					</form>
 				</div>
-				<div class="form-holder" style="margin-top: 3px;">
+				<div style="margin-top: 3px;">
 					<form action="/getInfo" method="POST">
 						<input class="submit-btn" type="submit" value="Get Info"></input>
 					</form>
 					<form action="/out" method="POST">
 						<input class="submit-btn" type="submit" value="Out"></input>
+					</form>
+					<form action="/delete" method="POST">
+						<input class="submit-btn" type="submit" value="Delete Account"></input>
 					</form>
 				</div>
 	
