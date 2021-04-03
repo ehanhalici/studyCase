@@ -4,9 +4,7 @@ from pymongo import MongoClient
 
 app = Flask(__name__, template_folder="./static")
 
-Myclient = MongoClient(
-	os.environ['DB_PORT_27017_TCP_ADDR'],
-	27017)
+Myclient  = MongoClient(os.environ['MONGODB_HOST'],port= 27017)
 Database = Myclient["mydatabase"]
 Collection = Database["account"]
 
